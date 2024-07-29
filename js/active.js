@@ -4,11 +4,17 @@
     var browserWindow = $(window);
 
     // :: 1.0 Preloader Active Code
-    browserWindow.on('load', function () {
+    // browserWindow.on('load', function () {
+    //     $('.preloader').fadeOut('slow', function () {
+    //         $(this).remove();
+    //     });
+    // });
+
+    setTimeout(function () {
         $('.preloader').fadeOut('slow', function () {
             $(this).remove();
         });
-    });
+    }, 1000);
 
     // :: 2.0 Nav Active Code
     if ($.fn.classyNav) {
