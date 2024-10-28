@@ -132,7 +132,7 @@
                         <a href="#" class="product-link">EWI</a>
 
                         <div class="product-price">
-                            <span>10.500.000 VNĐ</span>
+                            <span>7.900.000 VNĐ</span>
                         </div>
 
                         <div class="product-detail">
@@ -324,7 +324,7 @@
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             // Load content from external file using fetch API
-            fetch('description/greaten-ap300-pro.html')
+            fetch('https://thdaudio.com/description/greaten-ap300-plus.html')
                 .then(response => {
                     if (!response.ok) {
                         throw new Error('Network response was not ok');
@@ -332,7 +332,11 @@
                     return response.text();
                 })
                 .then(htmlContent => {
-                    document.getElementById("product_detail").appendChild(htmlContent)
+                    // Create a temporary container to convert string to HTML nodes
+                    const tempDiv = document.createElement("div");
+                    tempDiv.innerHTML = htmlContent;
+                    // Append all children from tempDiv to the target element
+                    document.getElementById("product_detail").append(...tempDiv.childNodes);
                 })
                 .catch(error => {
                     console.error('Error fetching content:', error);
