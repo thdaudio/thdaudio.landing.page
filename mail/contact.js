@@ -19,7 +19,7 @@ $(function () {
                 from_email: email,
                 from_name: name,
                 to_email: "thdaudio@outlook.com",
-                to_name: 'THDaudio',
+                to_name: 'KenDienTu',
                 phone_number: phoneNumber,
                 message: message
             };
